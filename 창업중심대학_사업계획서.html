@@ -94,6 +94,66 @@ table tr:nth-child(even) td { background: var(--bg2); }
 /* ── Diagram ── */
 .diagram { margin: 8px 0; }
 
+/* ── Images ── */
+.img-row {
+  display: flex; gap: 10px; margin: 10px 0; align-items: stretch;
+}
+.img-row .img-box {
+  flex: 1; text-align: center; border: 1px solid var(--ln); border-radius: 6px;
+  overflow: hidden; background: var(--bg2);
+}
+.img-row .img-box img { width: 100%; display: block; }
+.img-row .img-box .caption {
+  font-size: 7.5pt; color: var(--tx2); padding: 4px 6px; background: var(--bg1);
+  font-weight: 500;
+}
+.img-full {
+  margin: 10px 0; text-align: center; border: 1px solid var(--ln);
+  border-radius: 6px; overflow: hidden; background: var(--bg2);
+}
+.img-full img { width: 100%; display: block; }
+.img-full .caption {
+  font-size: 7.5pt; color: var(--tx2); padding: 4px 6px; background: var(--bg1);
+  font-weight: 500;
+}
+
+/* ── System Overview Diagram ── */
+.sys-overview {
+  margin: 14px 0; padding: 16px; background: var(--bg2);
+  border: 1.5px solid var(--c3); border-radius: 8px;
+}
+.sys-overview .sys-title {
+  text-align: center; font-size: 10pt; font-weight: 700; color: var(--c1);
+  margin-bottom: 12px;
+}
+.sys-flow {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.sys-block {
+  border-radius: 8px; padding: 8px 10px; text-align: center;
+  font-size: 8pt; line-height: 1.4; min-width: 100px;
+}
+.sys-block.input { background: var(--bg1); border: 1.5px solid var(--c3); }
+.sys-block.core { background: linear-gradient(135deg, var(--c1), var(--c2)); color: var(--w); min-width: 160px; }
+.sys-block.output { background: var(--a4); border: 1.5px solid var(--a1); }
+.sys-block .block-title { font-weight: 700; font-size: 8.5pt; margin-bottom: 3px; }
+.sys-block.core .block-title { color: var(--a3); }
+.sys-block .block-items { font-size: 7.5pt; color: inherit; }
+.sys-block.input .block-items { color: var(--tx2); }
+.sys-block.output .block-items { color: var(--tx); }
+.sys-arrow {
+  font-size: 16pt; color: var(--c3); font-weight: 700; line-height: 1;
+}
+.sys-bottom {
+  display: flex; justify-content: center; gap: 20px; margin-top: 10px;
+}
+.sys-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--w); border: 1px solid var(--ln); border-radius: 20px;
+  padding: 4px 12px; font-size: 7.5pt; color: var(--tx);
+}
+.sys-badge .badge-val { font-weight: 800; color: var(--c1); font-size: 9pt; }
+
 /* ── Footnote ── */
 p.footnote { font-size: 7.5pt; color: var(--tx3); margin: 3px 0; }
 
@@ -152,8 +212,62 @@ ul.compact li { font-size: 9pt; margin: 1px 0; }
   </div>
 </div>
 
+<!-- Before / After 이미지 -->
+<div class="img-row">
+  <div class="img-box">
+    <img src="fig2_speed_bump.png" alt="방지턱 충격 - Before">
+    <div class="caption">Before — 수동 서스펜션: 방지턱·노면 요철에 그대로 노출</div>
+  </div>
+  <div class="img-box">
+    <img src="fig2_ride_comfort.png" alt="편안한 주행 - After">
+    <div class="caption">After — VCM 능동 서스펜션: 충격을 실시간 흡수, 편안한 주행</div>
+  </div>
+</div>
+
 <div class="callout">
   <strong>개발 아이템</strong>: AI 자동 보정 VCM(보이스코일모터) 기반 감쇠력 제어 모듈 — VCM 직접 구동과 AI 자동 보정을 결합하여, 응답속도 1~10ms / 완제품 ~250만원의 <strong>"고성능·합리적 가격"</strong> 능동형 서스펜션을 실현합니다.
+</div>
+
+<!-- 시스템 개요도 -->
+<div class="figure-num">그림 1. 아이템 시스템 개요 — AI 자동 보정 VCM 감쇠력 제어 모듈</div>
+<div class="sys-overview">
+  <div class="sys-flow">
+    <div class="sys-block input">
+      <div class="block-title">센서 입력</div>
+      <div class="block-items">
+        가속도 센서 (3축)<br>
+        노면 프리뷰 센서<br>
+        차속 / 조향각<br>
+        홀센서 (VCM 위치)
+      </div>
+    </div>
+    <div class="sys-arrow">→</div>
+    <div class="sys-block core">
+      <div class="block-title">ECU + AI 보정 엔진</div>
+      <div class="block-items">
+        실시간 감쇠력 연산<br>
+        AI 캘리브레이션<br>
+        (개체별 편차 자동 보정)<br>
+        고속 구동 회로 제어
+      </div>
+    </div>
+    <div class="sys-arrow">→</div>
+    <div class="sys-block output">
+      <div class="block-title">VCM 감쇠력 출력</div>
+      <div class="block-items">
+        코어리스 VCM 4개<br>
+        할바흐 배열 자석<br>
+        연속 가변 감쇠력<br>
+        히스테리시스 Zero
+      </div>
+    </div>
+  </div>
+  <div class="sys-bottom">
+    <div class="sys-badge">응답속도 <span class="badge-val">1~10ms</span></div>
+    <div class="sys-badge">완제품 가격 <span class="badge-val">~250만원</span></div>
+    <div class="sys-badge">가공비 절감 <span class="badge-val">80%↑</span></div>
+    <div class="sys-badge">내구성 <span class="badge-val">열화 Zero</span></div>
+  </div>
 </div>
 
 <h2>1-2. 창업아이템 목표시장(고객) 현황 분석</h2>
@@ -206,6 +320,19 @@ ul.compact li { font-size: 9pt; margin: 1px 0; }
   <div class="topic-title">VCM(보이스코일모터) 핵심 기술 확보 현황</div>
   <div class="topic-body">
     <p>SmCo₂:₁₇ 영구자석 할바흐 배열 + 코어리스 VCM 구조로 2D 유한요소법(FEM) 시뮬레이션을 완료하였으며, 모든 핵심 성능 지표가 설계 목표를 충족하거나 상회합니다.</p>
+  </div>
+</div>
+
+<!-- VCM 시뮬레이션 + MVP 사진 -->
+<div class="figure-num">그림 2. VCM 전자기 시뮬레이션 결과 (좌) / 듀얼솔레노이드 MVP 서스펜션 실장 테스트 (우)</div>
+<div class="img-row">
+  <div class="img-box" style="flex: 1.4;">
+    <img src="halbach_vcm_simulation.png" alt="VCM Halbach 시뮬레이션">
+    <div class="caption">자속밀도 분포 및 에어갭 중심 필드 프로파일 — 설계 목표 충족</div>
+  </div>
+  <div class="img-box" style="flex: 0.6;">
+    <img src="듀얼솔레노이드 mvp_서스펜션 실장.png" alt="서스펜션 실장 테스트">
+    <div class="caption">서스펜션 실장 감쇠력 측정 테스트</div>
   </div>
 </div>
 
@@ -326,6 +453,13 @@ ul.compact li { font-size: 9pt; margin: 1px 0; }
 
 <div class="highlight">
   <strong>수익 구조의 핵심</strong>: SW 라이선스(10만원/대)는 한계비용 ~0이므로, 판매량 증가에 따라 이익률이 급격히 상승하는 구조입니다. 단순 하드웨어 제조업이 아닌 <strong>"AI+HW 통합 기술 기업"</strong>으로서의 가치를 보유합니다.
+</div>
+
+<!-- 매출 전망 -->
+<div class="figure-num">그림 3. 기술 사업화 기대 매출 추이 (2026~2030)</div>
+<div class="img-full">
+  <img src="그림_12.png" alt="매출 전망 그래프">
+  <div class="caption">보수적·평균·낙관적 시나리오 기반 매출 전망 — 2028년 매출 10억원 이상 목표</div>
 </div>
 
 <h2>3-2. 창업아이템 시장 진입 등 사업화 전략</h2>
@@ -532,6 +666,19 @@ ul.compact li { font-size: 9pt; margin: 1px 0; }
     <td>선정 후~</td>
   </tr>
 </table>
+
+<!-- 제작 현장 사진 -->
+<div class="figure-num">그림 4. MVP 제작 현장 — VCM 코일 조립 (좌) / 듀얼솔레노이드 MVP 완성품 (우)</div>
+<div class="img-row">
+  <div class="img-box">
+    <img src="듀얼솔레노이드 mvp_조립.jpg" alt="VCM 코일 조립">
+    <div class="caption">MVP 조립 공정 — 자체 작업장에서 수행</div>
+  </div>
+  <div class="img-box">
+    <img src="듀얼솔레노이드 mvp.png" alt="듀얼솔레노이드 MVP">
+    <div class="caption">듀얼솔레노이드 MVP 완성품</div>
+  </div>
+</div>
 
 <div class="topic">
   <div class="topic-title">보유 시설 및 장비</div>
