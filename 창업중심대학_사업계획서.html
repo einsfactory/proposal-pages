@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=794px, initial-scale=1.0">
+  <title>2026 창업중심대학 사업계획서 - 아인즈팩토리</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <style>
+:root {
+  --c1: #1E3A5F; --c2: #2E6B9E; --c3: #4A8BC4; --c4: #6BA3D4;
+  --a1: #1FA898; --a2: #30C2B0; --a3: #6DD8CA; --a4: #D1F0EB;
+  --tx: #293644; --tx2: #5A6B7E; --tx3: #8592A6;
+  --ln: #D2DAE4; --bg1: #EEF2F7; --bg2: #F6F8FB; --w: #FFFFFF;
+}
+@page { size: A4; margin: 15mm 18mm; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 210mm; margin: 0 auto; padding: 15mm 18mm;
+  background: var(--w); color: var(--tx);
+  font-family: 'Pretendard Variable', -apple-system, sans-serif;
+  font-size: 9.5pt; line-height: 1.6;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+
+/* ── Section Header ── */
+.sec-hdr {
+  background: var(--c1); border-radius: 6px; padding: 10px 20px; margin: 24px 0 16px 0;
+  display: flex; align-items: center; gap: 14px;
+  page-break-before: always;
+}
+.sec-hdr:first-of-type { page-break-before: avoid; }
+.sec-hdr .num { font-size: 22pt; font-weight: 800; color: var(--a2); line-height: 1; }
+.sec-hdr .ttl h1 { font-size: 13pt; font-weight: 700; color: var(--w); margin: 0; }
+.sec-hdr .ttl p { font-size: 8pt; color: var(--a3); margin: 0; }
+
+/* ── Headings ── */
+h2 {
+  font-size: 11pt; font-weight: 700; color: var(--c1);
+  border-left: 3px solid var(--a1); padding-left: 8px;
+  margin: 16px 0 8px 0;
+}
+h3 { font-size: 10pt; font-weight: 600; color: var(--c2); margin: 10px 0 6px 0; }
+
+/* ── Text ── */
+.topic { margin: 0 0 10px 0; }
+.topic-title {
+  font-size: 9.5pt; font-weight: 600; color: var(--c1);
+  margin-bottom: 3px;
+}
+.topic-body { padding-left: 12px; }
+.topic-body p { margin: 2px 0; font-size: 9pt; color: var(--tx); line-height: 1.55; }
+
+/* ── Tables ── */
+table {
+  width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 8.5pt;
+}
+table th {
+  background: var(--c1); color: var(--w); padding: 5px 8px;
+  font-weight: 600; text-align: center; border: 1px solid var(--c2);
+}
+table td {
+  padding: 4px 8px; border: 1px solid var(--ln); vertical-align: top;
+}
+table tr:nth-child(even) td { background: var(--bg2); }
+.table-num {
+  font-size: 8.5pt; font-weight: 600; color: var(--c2);
+  margin: 10px 0 3px 0; border-left: 3px solid var(--a1); padding-left: 6px;
+}
+.figure-num {
+  font-size: 8.5pt; font-weight: 600; color: var(--c2);
+  margin: 10px 0 3px 0; border-left: 3px solid var(--a1); padding-left: 6px;
+}
+
+/* ── Highlight boxes ── */
+.highlight {
+  background: var(--bg1); border-left: 3px solid var(--a1);
+  padding: 8px 12px; margin: 8px 0; border-radius: 0 4px 4px 0;
+  font-size: 9pt;
+}
+.highlight strong { color: var(--c1); }
+
+/* ── Stat row ── */
+.stat-row {
+  display: flex; gap: 8px; margin: 8px 0;
+}
+.stat-card {
+  flex: 1; background: var(--bg1); border-radius: 6px; padding: 8px 10px; text-align: center;
+  border: 1px solid var(--ln);
+}
+.stat-value { font-size: 14pt; font-weight: 800; color: var(--c1); }
+.stat-label { font-size: 7.5pt; color: var(--tx2); margin-top: 2px; }
+
+/* ── Diagram ── */
+.diagram { margin: 8px 0; }
+
+/* ── Footnote ── */
+p.footnote { font-size: 7.5pt; color: var(--tx3); margin: 3px 0; }
+
+/* ── Callout ── */
+.callout {
+  background: linear-gradient(135deg, var(--c1), var(--c2));
+  color: var(--w); padding: 10px 14px; border-radius: 6px; margin: 10px 0;
+  font-size: 9pt; line-height: 1.5;
+}
+.callout strong { color: var(--a3); }
+
+/* ── Page break ── */
+.page-break { page-break-before: always; }
+
+/* ── Compact list ── */
+ul.compact { margin: 4px 0 4px 16px; padding: 0; }
+ul.compact li { font-size: 9pt; margin: 1px 0; }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: 문제인식 (Problem) -->
+<!-- ============================================================ -->
+<div class="sec-hdr" style="page-break-before: avoid;">
+  <div class="num">01</div>
+  <div class="ttl">
+    <h1>문제인식 (Problem)</h1>
+    <p>Problem Recognition</p>
+  </div>
+</div>
+
+<h2>1-1. 창업아이템 배경 및 필요성</h2>
+
+<div class="topic">
+  <div class="topic-title">능동형 서스펜션, "기술은 있지만 비싸서 대중화 실패"</div>
+  <div class="topic-body">
+    <p>승차감(comfort)과 핸들링(stability)은 물리적으로 상충하는 관계입니다. 수동 서스펜션은 출고 시 세팅이 고정되어 제조사는 "중간 타협점"만 선택 가능하지만, <strong>능동형(가변) 서스펜션</strong>은 감쇠력을 실시간 조절하여 이 딜레마를 해결합니다.</p>
+    <p>그러나 현재 능동형/반능동형 서스펜션은 전 세계 차량의 <strong>약 20%에만 탑재</strong>되어 있으며, 미국 럭셔리 모델(51%)과 유럽 프리미엄 EV(67%)에 편중되어 있습니다. <strong>전체 차량의 80%가 가격 장벽으로 혜택을 받지 못하고 있습니다.</strong></p>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">EV 시대: 차량 중량 증가로 서스펜션이 안전과 직결</div>
+  <div class="topic-body">
+    <p>EV는 배터리 팩으로 동일 차체 기준 200~600kg(평균 ~454kg) 더 무거워, 제동거리 증가, 타이어 마모 가속(~20%), 코너링 롤 각도 심화 등 안전 문제가 발생합니다. <strong>고정 감쇠력의 수동 서스펜션으로는 대응에 한계가 있습니다.</strong></p>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">기존 기술의 양극화 — "저가는 느리고, 고가는 비싸다"</div>
+  <div class="topic-body">
+    <p><strong>모터/솔레노이드(CDC)</strong>: 완제품 ~200만원대이나 응답속도 20~80ms로 느려 체감 효과 부족.</p>
+    <p><strong>MR유체</strong>: 응답속도 10~20ms이나 완제품 500만원 이상, 철분 침전으로 시간 경과 시 성능 열화.</p>
+    <p>200~300만원대에서 <strong>확실한 체감</strong>을 제공하는 제품은 현재 시장에 존재하지 않습니다(시장 공백). 이 공백을 채우는 것이 본 아이템의 핵심 개발 필요성입니다.</p>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>개발 아이템</strong>: AI 자동 보정 VCM(보이스코일모터) 기반 감쇠력 제어 모듈 — VCM 직접 구동과 AI 자동 보정을 결합하여, 응답속도 1~10ms / 완제품 ~250만원의 <strong>"고성능·합리적 가격"</strong> 능동형 서스펜션을 실현합니다.
+</div>
+
+<h2>1-2. 창업아이템 목표시장(고객) 현황 분석</h2>
+
+<div class="topic">
+  <div class="topic-title">글로벌 시장 규모 및 성장 전망</div>
+  <div class="topic-body">
+    <p>글로벌 능동형 서스펜션 시장은 2023년 약 <strong>42억 달러</strong>이며, 연평균 4.6~8% 성장하여 2035년 ~85억 달러로 전망됩니다. 특히 애프터마켓 세그먼트는 CAGR 7.34%로 전체 대비 빠르게 성장 중입니다.</p>
+  </div>
+</div>
+
+<div class="stat-row">
+  <div class="stat-card">
+    <div class="stat-value">~$4.2B</div>
+    <div class="stat-label">TAM: 글로벌 능동형 서스펜션 시장 (2023)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$500M~800M</div>
+    <div class="stat-label">SAM: 전자제어 감쇠력 모듈 시장</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">$5M~10M</div>
+    <div class="stat-label">SOM: 5년 내 도달 목표</div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">목표 고객</div>
+  <div class="topic-body">
+    <p><strong>1차 고객(B2B)</strong>: 국내 애프터마켓 서스펜션 제조업체 — 이미 공동개발 파트너(구매의향서 보유)와 진행 중</p>
+    <p><strong>2차 고객(B2B)</strong>: 일본/글로벌 튜닝 시장 바이어, OEM 부품사</p>
+    <p><strong>최종 소비자</strong>: 승차감 개선을 원하는 중저가 차량 오너 (현재 250만원 이하 가격대에 선택지 부재)</p>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: 실현가능성 (Solution) -->
+<!-- ============================================================ -->
+<div class="sec-hdr">
+  <div class="num">02</div>
+  <div class="ttl">
+    <h1>실현가능성 (Solution)</h1>
+    <p>Feasibility — Development Plan</p>
+  </div>
+</div>
+
+<h2>2-1. 창업아이템의 개발/개선 준비현황</h2>
+
+<div class="topic">
+  <div class="topic-title">VCM(보이스코일모터) 핵심 기술 확보 현황</div>
+  <div class="topic-body">
+    <p>SmCo₂:₁₇ 영구자석 할바흐 배열 + 코어리스 VCM 구조로 2D 유한요소법(FEM) 시뮬레이션을 완료하였으며, 모든 핵심 성능 지표가 설계 목표를 충족하거나 상회합니다.</p>
+  </div>
+</div>
+
+<div class="table-num">표 1. VCM+AI vs 기존 기술 비교</div>
+<table>
+  <tr>
+    <th>비교 항목</th><th>모터/솔레노이드(CDC)</th><th>MR유체</th><th style="background:var(--a1);">VCM+AI (본 아이템)</th>
+  </tr>
+  <tr><td>완제품 가격 (1대분)</td><td>~200만원</td><td>500만원+</td><td><strong>~250만원</strong></td></tr>
+  <tr><td>응답속도</td><td>20~80ms</td><td>10~20ms (상용)</td><td><strong>1~10ms</strong></td></tr>
+  <tr><td>체감 효과</td><td>약함 (느린 응답)</td><td>있으나 과대 평가</td><td><strong>확실한 체감</strong></td></tr>
+  <tr><td>히스테리시스</td><td>있음</td><td>잔류자기 → 있음</td><td><strong>Zero</strong></td></tr>
+  <tr><td>내구성</td><td>기계적 마모</td><td>철가루 침전 → 성능 열화</td><td><strong>열화 요인 없음</strong></td></tr>
+  <tr><td>연속 제어</td><td>on/off 성격 강함</td><td>가능하나 잔류자기 영향</td><td><strong>부드러운 연속 제어</strong></td></tr>
+</table>
+
+<div class="topic">
+  <div class="topic-title">기술 역량 축적 — "앞으로 개발하겠다"가 아닌 "이미 하고 있는 일의 다음 단계"</div>
+  <div class="topic-body">
+    <p><strong>현업 기반</strong>: 서스펜션 전문 제조기업과 반능동형 서스펜션 AI 보정 프로젝트를 현재 수행 중이며, 구매의향서를 보유하고 있습니다.</p>
+    <p><strong>TIPA R&D 과제(1.2억원) 완수</strong>: PCR 진단기기의 회로설계+펌웨어+AI를 성공적으로 완수. 축적한 AI 기반 센서 데이터 분석·보정 기술이 VCM 캘리브레이션에 직접 전이 적용됩니다.</p>
+    <p><strong>풀스택 개발 역량</strong>: 회로 설계 → PCB → 펌웨어 → 응용 SW → 3D 기구 설계 → AI/ML까지 제품 개발 전 과정을 1인 수행 가능.</p>
+  </div>
+</div>
+
+<h2>2-2. 창업아이템 실현 및 구체화/고도화 방안</h2>
+
+<div class="topic">
+  <div class="topic-title">8개월 개발 로드맵 (협약기간 내)</div>
+  <div class="topic-body">
+    <p>협약기간 '26.5~12월(8개월) 내 <strong>"VCM 시제품 + AI 보정 SW + 벤치 테스트 완료"</strong>를 목표로 합니다.</p>
+  </div>
+</div>
+
+<div class="table-num">표 2. 8개월 개발 일정</div>
+<table>
+  <tr>
+    <th>단계</th><th>기간</th><th>핵심 내용</th><th>산출물</th>
+  </tr>
+  <tr>
+    <td><strong>Stage 1</strong><br>VCM 설계</td>
+    <td>1~2개월</td>
+    <td>전자기 설계(최적화 시뮬레이션), 밸브 기구 설계, 구동 회로 아키텍처 설계</td>
+    <td>설계도면, 회로 스펙</td>
+  </tr>
+  <tr>
+    <td><strong>Stage 2</strong><br>구동회로 개발</td>
+    <td>2~4개월</td>
+    <td>고속 응답 회로 설계 (1차 20ms → 2차 10ms → 최종 1~10ms), PCB 제작</td>
+    <td>구동 회로 PCB</td>
+  </tr>
+  <tr>
+    <td><strong>Stage 3</strong><br>시제품 제작</td>
+    <td>3~5개월</td>
+    <td>VCM 부품 가공(외주+자체 CNC), 조립, 홀센서 장착, 기초 동작 확인</td>
+    <td>VCM 시제품</td>
+  </tr>
+  <tr>
+    <td><strong>Stage 4</strong><br>AI 보정 SW</td>
+    <td>4~7개월</td>
+    <td>홀센서 기반 데이터 수집, AI 캘리브레이션 알고리즘 개발, 보정 전/후 성능 비교</td>
+    <td>AI 보정 SW, 특허 출원</td>
+  </tr>
+  <tr>
+    <td><strong>Stage 5</strong><br>최종 테스트</td>
+    <td>7~8개월</td>
+    <td>최종 벤치 테스트, 결과 분석, 특허 출원, 보고서 작성</td>
+    <td>테스트 리포트</td>
+  </tr>
+</table>
+
+<div class="table-num">표 3. 최종 산출물 (전체 사업단계)</div>
+<table>
+  <tr><th>구분</th><th>최종 산출물</th><th>수량</th><th>완료 일정</th></tr>
+  <tr><td>단기 (협약기간 내)</td><td>VCM/리니어모터 시제품 + 벤치테스트 완료</td><td>1식</td><td>~'26.12</td></tr>
+  <tr><td>단기 (협약기간 내)</td><td>AI 보정 소프트웨어 (캘리브레이션 알고리즘)</td><td>1식</td><td>~'26.11</td></tr>
+  <tr><td>단기 (협약기간 내)</td><td>VCM+AI 자동보정 관련 특허 출원</td><td>1건</td><td>~'26.12</td></tr>
+  <tr><td>중장기</td><td>실차 장착 및 주행 테스트 완료</td><td>1식</td><td>~'27.06</td></tr>
+  <tr><td>중장기</td><td>B2B 모듈 양산 및 첫 납품</td><td>-</td><td>~'27.12</td></tr>
+</table>
+
+<div class="topic">
+  <div class="topic-title">AI 캘리브레이션 — 원가 혁신의 핵심</div>
+  <div class="topic-body">
+    <p>기존 VCM은 공차 25μm 이내의 초정밀 가공이 필요하여 가공비가 매우 높습니다. 본 아이템은 각 VCM에 정밀 홀센서를 내장하고, AI가 개체별 편차 패턴을 자동 인식·보정하여 <strong>가공비를 80% 이상 절감</strong>합니다.</p>
+    <p>TIPA R&D 과제에서 PCR 기기의 AI 보정 알고리즘 프레임워크를 성공적으로 개발한 경험을 VCM에 직접 전이 적용합니다.</p>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: 성장전략 (Scale-up) -->
+<!-- ============================================================ -->
+<div class="sec-hdr">
+  <div class="num">03</div>
+  <div class="ttl">
+    <h1>성장전략 (Scale-up)</h1>
+    <p>Growth Strategy — Commercialization</p>
+  </div>
+</div>
+
+<h2>3-1. 창업아이템 비즈니스 모델</h2>
+
+<div class="topic">
+  <div class="topic-title">B2B 모듈 판매 모델 — HW+SW 통합 납품</div>
+  <div class="topic-body">
+    <p>서스펜션 제조업체에 <strong>VCM + ECU + AI 보정 SW 라이선스</strong>를 통합 모듈(45만원/대)로 납품합니다. 파트너사가 자사 기계부(스프링, 바디, 마운트)를 결합하여 완제품(~250만원)을 제작·판매합니다.</p>
+  </div>
+</div>
+
+<div class="table-num">표 4. B2B 모듈 가격 구성</div>
+<table>
+  <tr><th>구성품</th><th>가격</th><th>비중</th><th>특징</th></tr>
+  <tr><td>VCM 모듈 (리니어모터 4개)</td><td>20만원</td><td>44%</td><td>핵심 구동부</td></tr>
+  <tr><td>ECU (제어기)</td><td>15만원</td><td>33%</td><td>구동 회로 + 센서 인터페이스</td></tr>
+  <tr><td><strong>SW 라이선스 (AI 보정)</strong></td><td><strong>10만원</strong></td><td>22%</td><td><strong>한계비용 ~0, 고마진</strong></td></tr>
+  <tr style="background: var(--bg1);"><td><strong>합계 (B2B 모듈가)</strong></td><td><strong>45만원</strong></td><td>100%</td><td>매출총이익률 44~56%</td></tr>
+</table>
+
+<div class="highlight">
+  <strong>수익 구조의 핵심</strong>: SW 라이선스(10만원/대)는 한계비용 ~0이므로, 판매량 증가에 따라 이익률이 급격히 상승하는 구조입니다. 단순 하드웨어 제조업이 아닌 <strong>"AI+HW 통합 기술 기업"</strong>으로서의 가치를 보유합니다.
+</div>
+
+<h2>3-2. 창업아이템 시장 진입 등 사업화 전략</h2>
+
+<div class="topic">
+  <div class="topic-title">단계적 시장 진입 전략</div>
+  <div class="topic-body">
+    <p><strong>Phase 1 (2026~2027)</strong>: 공동개발 파트너사 첫 납품, 실차 성능 데이터 확보 (구매의향서 보유)</p>
+    <p><strong>Phase 2 (2027~2028)</strong>: 국내 애프터마켓 확대, 연 100~500대 B2B 모듈 납품</p>
+    <p><strong>Phase 3 (2028~2030)</strong>: 일본 시장 진출 (기존 제휴기업 활용), 글로벌 전시회(SEMA SHOW) 참가</p>
+    <p><strong>Phase 4 (2030~)</strong>: 국내 OEM 진입 (IATF 16949 인증), 글로벌 확장</p>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">경쟁 우위</div>
+  <div class="topic-body">
+    <p><strong>가격</strong>: ~250만원 (CDC ~200만원 수준의 가격에 MR유체 이상의 성능)</p>
+    <p><strong>성능</strong>: 응답속도 1~10ms (CDC 대비 4~80배 빠름)</p>
+    <p><strong>모방 장벽</strong>: VCM 설계 노하우 + AI 알고리즘 + 실험 데이터 + 특허 → 복합적 진입장벽</p>
+  </div>
+</div>
+
+<h2>3-3. 사업 추진 일정 및 자금 운용 계획</h2>
+
+<h3>3-3-1. 사업 전체 로드맵</h3>
+
+<div class="table-num">표 5. 전체 사업 로드맵</div>
+<table>
+  <tr><th>순번</th><th>추진 내용</th><th>추진 기간</th><th>세부 내용</th></tr>
+  <tr><td>1</td><td>VCM 설계 및 시뮬레이션</td><td>'26 상반기</td><td>전자기 설계, 밸브 기구 설계, 구동 회로 아키텍처</td></tr>
+  <tr><td>2</td><td>시제품 제작 및 벤치테스트</td><td>'26 하반기</td><td>VCM+AI 시제품 완성, 성능 측정</td></tr>
+  <tr><td>3</td><td>실차 장착 및 검증</td><td>'27 상반기</td><td>파트너사와 공동 실차 테스트</td></tr>
+  <tr><td>4</td><td>B2B 모듈 양산 및 첫 납품</td><td>'27 하반기</td><td>양산 체계 구축, 국내 첫 B2B 납품</td></tr>
+  <tr><td>5</td><td>국내 시장 확대 및 해외 진출</td><td>'28~</td><td>다차종 확장, 일본/글로벌 시장 진출</td></tr>
+</table>
+
+<h3>3-3-2. 협약기간('26.5~12월) 내 목표 및 달성 방안</h3>
+
+<div class="topic">
+  <div class="topic-body">
+    <p><strong>핵심 목표</strong>: VCM 시제품 + AI 보정 SW + 벤치테스트 완료</p>
+    <p><strong>달성 근거</strong>: 보유 장비(CNC, 3D프린터 9대, 오실로스코프 등)로 설계→시제품→테스트 사이클을 자체 공간에서 빠르게 반복 가능. TIPA R&D 완수 경험으로 정부과제 수행 역량 검증 완료.</p>
+  </div>
+</div>
+
+<h3>3-3-3. 자금 필요성 및 조달계획</h3>
+
+<div class="topic">
+  <div class="topic-body">
+    <p><strong>자금 필요성</strong>: VCM 부품 정밀가공(외주), 전자부품 구매, 시금형 제작 등 시제품 개발에 집중 투자 필요</p>
+    <p><strong>조달 계획</strong>: 정부지원사업비(본 사업) + 자기부담(현금+현물) + 기보유 매출(연 1억원 수준)</p>
+    <p><strong>추가 확보 계획</strong>: 기술보증기금 보증, 지역혁신선도기업육성 R&D(2.13억원, 진행 중) 연계</p>
+  </div>
+</div>
+
+<h3>3-3-4. 사업비 집행계획</h3>
+
+<div class="table-num">표 6. 사업비 집행 계획 (총사업비 1억원 기준)</div>
+<table>
+  <tr>
+    <th>비목</th><th>집행 계획</th><th>정부지원(ⓐ)</th><th>자기부담(ⓑ)</th><th>합계</th>
+  </tr>
+  <tr>
+    <td>재료비</td><td>VCM 부품(자석, 코일, 하우징), 전자부품(IC, 센서, 수동소자), 시험용 소모품</td>
+    <td style="text-align:right;">20,000,000</td><td style="text-align:right;">5,000,000</td><td style="text-align:right;">25,000,000</td>
+  </tr>
+  <tr>
+    <td>외주용역비</td><td>VCM 부품 정밀가공(CNC 외주), 시금형 제작, PCB 시제품 제작</td>
+    <td style="text-align:right;">25,000,000</td><td style="text-align:right;">5,000,000</td><td style="text-align:right;">30,000,000</td>
+  </tr>
+  <tr>
+    <td>기계장치·SW</td><td>계측장비 보강, CAE 시뮬레이션 SW 라이선스</td>
+    <td style="text-align:right;">10,000,000</td><td style="text-align:right;">-</td><td style="text-align:right;">10,000,000</td>
+  </tr>
+  <tr>
+    <td>특허권 등</td><td>VCM+AI 자동보정 특허 출원(국내 1건)</td>
+    <td style="text-align:right;">5,000,000</td><td style="text-align:right;">-</td><td style="text-align:right;">5,000,000</td>
+  </tr>
+  <tr>
+    <td>인건비</td><td>연구원 2명 과제 참여 인건비</td>
+    <td style="text-align:right;">5,000,000</td><td style="text-align:right;">10,000,000</td><td style="text-align:right;">15,000,000</td>
+  </tr>
+  <tr>
+    <td>광고선전비</td><td>서울오토살롱 전시 참가, 홍보물 제작</td>
+    <td style="text-align:right;">3,000,000</td><td style="text-align:right;">2,000,000</td><td style="text-align:right;">5,000,000</td>
+  </tr>
+  <tr>
+    <td>여비·교육·기타</td><td>출장비, 기술교육, 지급수수료</td>
+    <td style="text-align:right;">2,000,000</td><td style="text-align:right;">8,000,000</td><td style="text-align:right;">10,000,000</td>
+  </tr>
+  <tr style="background: var(--bg1); font-weight: 700;">
+    <td>합계</td><td></td>
+    <td style="text-align:right;">70,000,000</td><td style="text-align:right;">30,000,000</td><td style="text-align:right;">100,000,000</td>
+  </tr>
+</table>
+<p class="footnote">※ 정부지원사업비 70% + 자기부담사업비 30% (현금 10% + 현물 20%)</p>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: 조직구성 (Team) -->
+<!-- ============================================================ -->
+<div class="sec-hdr">
+  <div class="num">04</div>
+  <div class="ttl">
+    <h1>조직구성 (Team)</h1>
+    <p>Team Composition</p>
+  </div>
+</div>
+
+<h2>4-1. 조직구성원 보유역량</h2>
+
+<h3>4-1-1. 대표자 및 조직 현황</h3>
+
+<div class="topic">
+  <div class="topic-title">대표이사 — 풀스택 하드웨어 엔지니어</div>
+  <div class="topic-body">
+    <p><strong>학력</strong>: 전자전기공학 학사</p>
+    <p><strong>핵심 역량</strong>: 회로 설계 → PCB → 펌웨어 → 응용 SW → 3D 기구 설계 → AI/ML까지 제품 개발 전 과정 1인 수행 가능</p>
+    <p><strong>현업</strong>: 서스펜션 전문 제조기업과 반능동형 서스펜션 AI 보정 공동개발 진행 중 (구매의향서 보유)</p>
+    <p><strong>R&D 이력</strong>: TIPA R&D 과제(1.2억원) 완수 — PCR 기기 회로설계+펌웨어+AI 전담</p>
+    <p><strong>5개 산업 도메인 횡단</strong>: 나노소재 → 광학/의료 → 방산/RF → 바이오진단/AI → 자동차/AI</p>
+    <p><strong>수상</strong>: 최우수상 1건, 우수상 2건, 특별상 1건 / 아시아 창업교류전 한국대표</p>
+    <p><strong>특허</strong>: AI-SW 형광 바이오 이미지 분별장치 (출원 완료), VCM+AI 자동보정 (출원 예정)</p>
+  </div>
+</div>
+
+<div class="table-num">표 7. 조직구성 현황</div>
+<table>
+  <tr><th>직위</th><th>담당업무</th><th>보유역량</th><th>상태</th></tr>
+  <tr>
+    <td><strong>대표이사</strong></td>
+    <td>VCM 설계, 구동회로 개발, AI 보정 알고리즘, 사업 총괄</td>
+    <td>전자전기공학 학사, HW+SW+AI 풀스택, TIPA R&D 완수, 수상 4건</td>
+    <td>기구성</td>
+  </tr>
+  <tr>
+    <td>연구원 (기계)</td>
+    <td>VCM 기구 설계, 밸브 설계, AI 보정 SW 공동 개발</td>
+    <td>기계공학 학사, 3D CAD 설계, 서스펜션 AI 보정 프로젝트 수행 중</td>
+    <td>기구성</td>
+  </tr>
+  <tr>
+    <td>연구원 (데이터)</td>
+    <td>실험 데이터 수집/분석, AI 학습 데이터 구축, 품질관리</td>
+    <td>식품공학 박사 수료, 연구방법론(DOE), TIPA R&D 데이터셋 구축 담당</td>
+    <td>기구성</td>
+  </tr>
+  <tr>
+    <td>설계/가공 담당</td>
+    <td>3D 설계, 부품 가공, 시제품 제작 지원</td>
+    <td>3D CAD/CAM, CNC 가공 경험 (요구)</td>
+    <td>채용 예정</td>
+  </tr>
+</table>
+
+<h3>4-1-2. 협약 기간 내 인력 고용 및 활용 계획</h3>
+
+<div class="table-num">표 8. 추가 고용 및 활용 계획</div>
+<table>
+  <tr><th>순번</th><th>주요 담당업무</th><th>요구역량</th><th>채용 시기</th></tr>
+  <tr><td>1</td><td>3D 설계 및 CNC 가공</td><td>기계 관련 전공, CAD/CAM 경력</td><td>'26.06</td></tr>
+</table>
+
+<h2>4-2. 외부 네트워크 현황 및 세부 활용 계획</h2>
+
+<div class="topic">
+  <div class="topic-title">핵심 협력 네트워크</div>
+  <div class="topic-body">
+    <p>서스펜션 전문기업, 대학 연구실, 시험인증기관 등 <strong>개발→검증→양산</strong> 전 단계에 걸친 협력 체계를 구축하고 있습니다.</p>
+  </div>
+</div>
+
+<div class="table-num">표 9. 네트워크 구축 및 활용 계획</div>
+<table>
+  <tr><th>파트너</th><th>보유역량</th><th>협업방안</th><th>시기</th></tr>
+  <tr>
+    <td><strong>서스펜션 전문기업</strong></td>
+    <td>서스펜션 제조/설계, 실차 테스트 인프라</td>
+    <td>VCM 공동개발(진행 중), 실차 검증, 첫 납품처 (구매의향서 보유)</td>
+    <td>현재~지속</td>
+  </tr>
+  <tr>
+    <td><strong>바이오기기 기업</strong></td>
+    <td>의료기기 인허가, 컨소시엄 운영</td>
+    <td>3년간 4개 공동개발 완료, 기술 자문, 지역혁신R&D 컨소시엄 참여 중</td>
+    <td>2018~지속</td>
+  </tr>
+  <tr>
+    <td><strong>대학 교수 연구실</strong></td>
+    <td>바이오진단, AI 응용 연구</td>
+    <td>TIPA R&D 공동수행(1.2억원 완수), AI 기술 교류</td>
+    <td>현재~지속</td>
+  </tr>
+  <tr>
+    <td><strong>시험인증기관 (KTC)</strong></td>
+    <td>기계/전기/전자 시험인증</td>
+    <td>VCM 성능 시험, KC 인증</td>
+    <td>시제품 완성 후</td>
+  </tr>
+  <tr>
+    <td><strong>성균관대 창업중심대학</strong></td>
+    <td>창업 교육, 멘토링, 투자 연계</td>
+    <td>창업 프로그램 활용, 네트워크 확장, 기술 고도화 멘토링</td>
+    <td>선정 후~</td>
+  </tr>
+</table>
+
+<div class="topic">
+  <div class="topic-title">보유 시설 및 장비</div>
+  <div class="topic-body">
+    <p><strong>사업장</strong>: 경기도 의왕시 (약 70평 = 사무 20평 + 작업 50평)</p>
+    <p><strong>래피드 프로토타이핑</strong>: FDM 3D 프린터 6대 + 레진(SLA) 3D 프린터 3대</p>
+    <p><strong>가공</strong>: CNC 밀링 머신 1대, 선반 가공기계 1대</p>
+    <p><strong>계측</strong>: 오실로스코프(Keysight), 스코프미터(Fluke)</p>
+    <p><strong>기업부설연구소(전담부서)</strong>: 2026년 3월 한국산업기술진흥협회 설립 신고 예정</p>
+  </div>
+</div>
+
+<div class="callout">
+  CNC + 선반 + 3D 프린터 9대 = <strong>시제품 자체 제작 역량</strong>. 장비 구매·대기 없이 바로 개발 착수 가능하며, 설계 변경 시 즉시 재제작하여 8개월 내 시제품+벤치테스트 달성의 현실성을 뒷받침합니다.
+</div>
+
+</body>
+</html>
